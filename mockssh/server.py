@@ -74,7 +74,7 @@ class Handler(paramiko.ServerInterface):
         if known_public_key == key:
             self.log.debug("Accepting public key for user '%s'", username)
             return paramiko.AUTH_SUCCESSFUL
-        self.log.debug("Rejecting public ley for user '%s'", username)
+        self.log.debug("Rejecting public key for user '%s'", username)
         return paramiko.AUTH_FAILED
 
     def check_channel_exec_request(self, channel, command):
